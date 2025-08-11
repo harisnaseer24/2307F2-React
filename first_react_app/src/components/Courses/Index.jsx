@@ -15,7 +15,7 @@ const Courses = ({courses=[]}) => {
         <div className="card" style={{height:'500px'}}>
   <img src={course.thumbnail} className="card-img-top" alt="..." height={280}/>
   <div className="card-body">
-    <h5 className="card-title">{course.title} <span class="badge text-bg-primary">{course.duration}</span></h5>
+    <h5 className="card-title">{course.title} </h5>
     <p className="card-text">
      {course.description}.
     </p>

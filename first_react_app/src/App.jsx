@@ -8,6 +8,7 @@ import Courses from "./components/Courses/Index";
 import Footer from "./components/Footer/Index";
 import Hero from "./components/Hero/Index";
 import Navbar from "./components/Navbar/Index";
+import axios from "axios"
 
 // import {App } from './App.jsx'//Named Import
 // export function App() {
@@ -28,10 +29,15 @@ async function   getProducts  (){
 //   })})
 
 try {
-  let response= await fetch("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses")
-  let data= await response.json();
-  console.log(data)
-  setProducts(data);
+
+   const response = await axios.get("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses");
+    // console.log(response.data);
+    // let data= response.data
+    setProducts(response.data);
+
+  // let response= await fetch("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses")
+  // let data= await response.json();
+  // console.log(data)
   
 } catch (error) {
   console.log(error);
@@ -109,10 +115,10 @@ useEffect(()=>{
     <>
     <Navbar/>
     {/* passing the props */}
-    <Hero title="Learn Generative AI" thumbnail="ai-banner.png" />
+    {/* <Hero title="Learn Generative AI" thumbnail="ai-banner.png" />
     <Courses courses={products}/>
 
-    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/>
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> */}
       <Footer/>
     </>
   )
