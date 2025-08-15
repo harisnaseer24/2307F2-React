@@ -9,16 +9,17 @@ import Footer from "./components/Footer/Index";
 import Hero from "./components/Hero/Index";
 import Navbar from "./components/Navbar/Index";
 import axios from "axios"
+import UserLayout from "./components/UserLayout/Index";
 
 // import {App } from './App.jsx'//Named Import
 // export function App() {
  function App() {
-  let  [products, setProducts]=useState([])
+  // let  [products, setProducts]=useState([])
 
   // const getProd=async () =>{
     
   // }
-async function   getProducts  (){
+// async function   getProducts  (){
   // Could be GET or POST/PUT/PATCH/DELETE
 // fetch('https://dummyjson.com/products?limit=100')
 // .then((res)=>{res.json()
@@ -28,25 +29,25 @@ async function   getProducts  (){
   
 //   })})
 
-try {
+// try {
 
-   const response = await axios.get("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses");
-    // console.log(response.data);
-    // let data= response.data
-    setProducts(response.data);
+//    const response = await axios.get("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses");
+//     // console.log(response.data);
+//     // let data= response.data
+//     setProducts(response.data);
 
-  // let response= await fetch("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses")
-  // let data= await response.json();
-  // console.log(data)
+//   // let response= await fetch("https://6895fd7e039a1a2b289119bf.mockapi.io/api/v1/courses")
+//   // let data= await response.json();
+//   // console.log(data)
   
-} catch (error) {
-  console.log(error);
-}
-}
+// } catch (error) {
+//   console.log(error);
+// }
+// }
 
-useEffect(()=>{
-  getProducts();
-},[])
+// useEffect(()=>{
+//   getProducts();
+// },[])
 
 
 // let age = 23
@@ -113,13 +114,25 @@ useEffect(()=>{
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     {/* passing the props */}
     {/* <Hero title="Learn Generative AI" thumbnail="ai-banner.png" />
     <Courses courses={products}/>
 
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> */}
-      <Footer/>
+      {/* <Footer/> */}
+
+<UserLayout>
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+    <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
+  
+</UserLayout>
+
+
     </>
   )
 }
