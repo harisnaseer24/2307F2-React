@@ -122,7 +122,7 @@ import UserLayout from "./components/UserLayout/Index";
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> */}
       {/* <Footer/> */}
 
-<UserLayout>
+{/* <UserLayout>
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
@@ -130,7 +130,12 @@ import UserLayout from "./components/UserLayout/Index";
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
     <Hero  title="Learn React JS in 90 Days" thumbnail="react-logo-new.jpg"/> 
   
-</UserLayout>
+</UserLayout> */}
+
+
+
+
+
 
 
     </>
